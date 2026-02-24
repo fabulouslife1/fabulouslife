@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fabulous Life</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('fabulous.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* Top navigation bar */
+.top-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    padding: 15px 0;
+    z-index: 10;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: inline-flex;
+    gap: 80px;
+    animation: scrollText 20s linear infinite;
+}
+
+.marquee-content span {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Animation */
+@keyframes scrollText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("background.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Dark overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    z-index: 1;
+}
+
+/* Content */
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 40px 50px;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+
+h1, p {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Logo circle */
+.logo-circle {
+    width: 140px;
+    height: 140px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Headline */
+h1 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+h1 strong {
+    font-weight: 700;
+}
+
+/* Paragraph */
+p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn {
+    padding: 14px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.youtube {
+    background: #ff1e1e;
+}
+
+.youtube:hover {
+    background: #cc0000;
+}
+
+.facebook {
+    background: #3b4cca;
+}
+
+.facebook:hover {
+    background: #2c38a0;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+   <div class="top-bar">
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Fabulous Life</span>
+            <span>Fabulous Travel</span>
+            <span>Fabulous Life</span>
+            <span>Fabulous Travel</span>
+            <span>Fabulous Life</span>
+            <span>Fabulous Travel</span>
+
+            <!-- Duplicate để chạy mượt vô hạn -->
+            <span>Fabulous Life</span>
+            <span>Fabulous Travel</span>
+            <span>Fabulous Life</span>
+            <span>Fabulous Travel</span>
+            <span>Fabulous Life</span>
+            <span>Fabulous Travel</span>
+        </div>
+    </div>
+</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="content">
+            <div class="logo-circle">
+                Fabulous Life
+            </div>
+
+            <h1>
+                <strong>Fabulous Life</strong> is where luxury travel meets slow living,
+                elegance, and healing.
+            </h1>
+
+            <p>
+                We explore refined destinations and meaningful experiences—from peaceful resorts
+                to quiet moments in nature—designed not just to be seen, but deeply felt.
+                <br>
+                True luxury is inner calm.
+                <br>
+                Follow Fabulous Life and let each day feel slower,
+                deeper, and truly worth living.
+            </p>
+
+            <div class="buttons">
+                <a href="https://www.youtube.com/@fabulouslife-mm" class="btn youtube">Youtube</a>
+                <a href="https://www.facebook.com/Fabulouslifes" class="btn facebook">Facebook</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
